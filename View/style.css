@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(236, 226, 231);
+}
+
+main{
+    background-color: #ffffff;
+}
+
+.kartya p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
