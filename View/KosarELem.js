@@ -12,8 +12,8 @@ export default class KosarElem{
     kosarMegjelenit(){
         this.szuloElem.append(`
             <div class="p-2">
-            <div class="kartya row">
-            <img src="${this.#obj.pic}" alt="${this.#obj.name}" class="col-lg-4 col-md-12 mb-2">
+            <div class="kosar row">
+            <img src="${this.#obj.pic}" alt="${this.#obj.name}" class="col-lg-4 col-md-12 mb-2 h-100">
             <p class="col-lg-8 col-md-12">${this.#obj.name}<br>
             ${this.#obj.price} $<br>
             Mennyiség: ${this.#obj.menny}</p>

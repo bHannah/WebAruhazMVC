@@ -11,11 +11,10 @@ main{
     font-size: 25px;
 }
 
-.kartya button{
+.kartya button, .kosar button{
     background-color: #ece2e7;
     border: 1px #c0a1b1 solid;
     border-radius: 10px;
-    width: 40%;
     height: 40px;
 }
 
