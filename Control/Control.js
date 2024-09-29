@@ -12,10 +12,9 @@ export default class Control{
 
     #esemenykezelo(){
         $(window).on("kattintas", (event)=>{
-            console.log(event.detail.name)
+            this.kosarElem = $(".kosar");
             this.model.kosarhozAd(event.detail);
-            this.kosarElem = $(".kosar")
-            new Termekek(this.model.getKosarLista(), this.kosarElem)
+            console.log(this.model.KOSARLISTA)
         });
     }
 }

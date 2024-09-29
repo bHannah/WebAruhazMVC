@@ -1,5 +1,3 @@
-import { DRESSLIST } from "../Model/adat.js";
-
 export default class Model{
     //adattagok
     #LISTA = [];
@@ -20,10 +18,10 @@ export default class Model{
     }
 
     getKosarLista(){
-        return this.KOSARLISTA
+        return this.KOSARLISTA;
     }
 
-    kosarhozAd(objekt){
-        this.KOSARLISTA += objekt
+    kosarhozAd(o){
+        this.KOSARLISTA += o
     }
 }
