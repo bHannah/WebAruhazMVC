@@ -21,8 +21,30 @@ export default class Model{
         return this.KOSARLISTA;
     }
 
+    ellenorzes(o){
+        if(this.KOSARLISTA.length > 0){
+            for(let i = 0; i < this.KOSARLISTA; i++) {
+                if(this.KOSARLISTA[i].name === o.name){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        }else{
+            return false
+        }
+    }
+
     kosarhozAd(o){
-        this.KOSARLISTA.push(o)
+        if(this.ellenorzes(o) === false){
+            this.KOSARLISTA.push(o)
+        }else{
+            for (let i = 0; i < this.KOSARLISTA.length; i++) {
+                if(this.KOSARLISTA[i].name === o.name){
+                    this.KOSARLISTA[i].menny += 1
+                }                
+            }
+        }
     }
 
     vegosszegSzamito(){
@@ -34,6 +56,11 @@ export default class Model{
     }
 
     kosarbolTorol(o){
+        for (let i = 0; i < this.KOSARLISTA.length; i++) {
+            if(this.KOSARLISTA[i].name === o.name){
+                this.KOSARLISTA[i].menny = 1
+            }  
+        }
         this.KOSARLISTA.splice(o,1)
     }
 }

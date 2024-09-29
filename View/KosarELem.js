@@ -16,6 +16,7 @@ export default class KosarElem{
             <img src="${this.#obj.pic}" alt="${this.#obj.name}" class="w-100">
             <p>${this.#obj.name}</p>
             <p>${this.#obj.price} $</p>
+            <p>DB: ${this.#obj.menny}</p>
             <button class="eltavolit">Eltávolítás</button>
             </div>
             </div>`)
