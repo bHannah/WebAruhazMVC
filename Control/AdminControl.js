@@ -18,6 +18,8 @@ export default class AdminControl{
 
     esemenykezelo(){
         $(window).on("torles", (event)=>{
+            DRESSLIST.splice(event.detail, 1);
+            this.init(DRESSLIST)
             console.log(event.detail);
         });
     }
