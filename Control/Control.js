@@ -1,6 +1,7 @@
 import Model from "../Model/Model.js";
 import Termekek from "../View/Termekek.js";
 import { DRESSLIST } from "../Model/adat.js";
+import Kosar from "../View/Kosar.js";
 
 export default class Control{
     constructor(){
@@ -15,6 +16,9 @@ export default class Control{
             this.kosarElem = $(".kosar");
             this.model.kosarhozAd(event.detail);
             console.log(this.model.KOSARLISTA)
+            this.kosar = new Kosar(this.model.KOSARLISTA, this.kosarElem)
+            let vegosszeg = this.model.vegosszegSzamito();
+            this.kosar.vegosszegMegjelenit(vegosszeg);
         });
     }
 }

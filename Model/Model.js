@@ -22,6 +22,14 @@ export default class Model{
     }
 
     kosarhozAd(o){
-        this.KOSARLISTA += o
+        this.KOSARLISTA.push(o)
+    }
+
+    vegosszegSzamito(){
+        let osszeg = 0;
+        for (let i = 0; i < this.KOSARLISTA.length; i++) {
+            osszeg += this.KOSARLISTA[i].price
+        }
+        return osszeg;
     }
 }
