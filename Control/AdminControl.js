@@ -3,6 +3,7 @@ import AdminTermekek from "../View/AdminTermekek.js";
 import { DRESSLIST } from "../Model/adat.js";
 
 export default class AdminControl{
+    
     constructor(){
         this.init(DRESSLIST);
 
@@ -18,7 +19,6 @@ export default class AdminControl{
     esemenykezelo(){
         $(window).on("torles", (event)=>{
             console.log(event.detail);
-            
         });
     }
 }
