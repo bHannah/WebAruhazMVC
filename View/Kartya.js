@@ -4,7 +4,9 @@ export default class Kartya{
     constructor(obj, szuloElem){
         this.#obj = obj
         this.szuloElem = szuloElem;
+        this.kattintottElem = $(".kattintott:last")
         this.kartyaMegjelenit()
+        this.esemenyKezelo()
     }
     //tagfüggvények
     kartyaMegjelenit(){
@@ -13,8 +15,16 @@ export default class Kartya{
             <div class="kartya">
             <img src="${this.#obj.pic}" alt="${this.#obj.name}" class="w-100">
             <p>${this.#obj.name}</p>
-            <button>Kosárba</button>
+            <p>${this.#obj.price} $</p>
+            <button class="kattintott">Kosárba</button>
             </div>
             </div>`)
+    }
+
+    esemenyKezelo(){
+        this.kattintottElem.on("click", ()=>{
+            const e = new CustomEvent("kattintas", {detail: this.#obj});
+            window.dispatchEvent(e);
+        })
     }
 }
