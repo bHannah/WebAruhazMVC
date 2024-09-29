@@ -23,7 +23,7 @@ export default class Model{
 
     kosarhozAd(o){
         if (!this.KOSARLISTA.includes(o)) {
-            this.KOSARLISTA.push(o);
+            this.listaFuzes(o)
         }else{
             this.mennyisegnovel(o);
         }
