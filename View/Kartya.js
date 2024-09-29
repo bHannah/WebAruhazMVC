@@ -4,8 +4,8 @@ export default class Kartya{
     constructor(obj, szuloElem){
         this.#obj = obj
         this.szuloElem = szuloElem;
-        this.kattintottElem = $(".kattintott:last")
         this.kartyaMegjelenit()
+        this.kattintottElem = $(".kattintott:last")
         this.esemenyKezelo()
     }
     //tagfüggvények
