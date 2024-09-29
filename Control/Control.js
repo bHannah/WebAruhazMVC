@@ -9,16 +9,26 @@ export default class Control{
         this.model = new Model(DRESSLIST)
         new Termekek(this.model.getLista(), this.termekElem)
         this.#esemenykezelo();
+        this.esemenyTorles();
     }
 
     #esemenykezelo(){
         $(window).on("kattintas", (event)=>{
             this.kosarElem = $(".kosar");
             this.model.kosarhozAd(event.detail);
-            console.log(this.model.KOSARLISTA)
             this.kosar = new Kosar(this.model.KOSARLISTA, this.kosarElem)
             let vegosszeg = this.model.vegosszegSzamito();
             this.kosar.vegosszegMegjelenit(vegosszeg);
         });
+    }
+
+    esemenyTorles(){
+        $(window).on("eltavolitas", (event)=>{
+            this.kosarElem = $(".kosar");
+            this.model.kosarbolTorol(event.detail)
+            this.kosar = new Kosar(this.model.KOSARLISTA, this.kosarElem)
+            let vegosszeg = this.model.vegosszegSzamito();
+            this.kosar.vegosszegMegjelenit(vegosszeg);
+        })
     }
 }

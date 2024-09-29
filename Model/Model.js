@@ -32,4 +32,8 @@ export default class Model{
         }
         return osszeg;
     }
+
+    kosarbolTorol(o){
+        this.KOSARLISTA.splice(o,1)
+    }
 }
