@@ -50,7 +50,7 @@ export default class Model{
     vegosszegSzamito(){
         let osszeg = 0;
         for (let i = 0; i < this.KOSARLISTA.length; i++) {
-            osszeg += this.KOSARLISTA[i].price
+            osszeg += (this.KOSARLISTA[i].price*this.KOSARLISTA[i].menny)
         }
         return osszeg;
     }
