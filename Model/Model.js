@@ -21,44 +21,23 @@ export default class Model{
         return this.KOSARLISTA;
     }
 
-    ellenorzes(o){
-        if(this.KOSARLISTA.length > 0){
-            for(let i = 0; i < this.KOSARLISTA; i++) {
-                if(this.KOSARLISTA[i].name === o.name){
-                    return true;
-                }else{
-                    return false;
-                }
-            }
+    kosarhozAd(o){
+        if (!this.KOSARLISTA.includes(o)) {
+            this.KOSARLISTA.push(o);
         }else{
-            return false
+            this.mennyisegnovel(o);
         }
-
-        // var i = 0
-
-        // if(this.KOSARLISTA.length > 0){
-        //     while(i<this.KOSARLISTA.length || this.KOSARLISTA[i].name != o.name) {
-        //         console.log(this.KOSARLISTA[i])
-        //         i++;
-        //         console.log(i>=this.KOSARLISTA.length)
-        //     }
-        // }
-        // else{
-        //     return false
-        // }
-
-        // return i>=this.KOSARLISTA.length;
     }
 
-    kosarhozAd(o){
-        if(this.ellenorzes(o) === false){
-            this.KOSARLISTA.push(o)
-        }else{
-            for (let i = 0; i < this.KOSARLISTA.length; i++) {
-                if(this.KOSARLISTA[i].name === o.name){
-                    this.KOSARLISTA[i].menny += 1
-                }                
-            }
+    listaFuzes(o){
+        this.KOSARLISTA.push(o)
+    }
+
+    mennyisegnovel(o){
+        for (let i = 0; i < this.KOSARLISTA.length; i++) {
+            if(this.KOSARLISTA[i].name === o.name){
+                this.KOSARLISTA[i].menny += 1
+            }                
         }
     }
 
