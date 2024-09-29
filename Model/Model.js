@@ -33,6 +33,21 @@ export default class Model{
         }else{
             return false
         }
+
+        // var i = 0
+
+        // if(this.KOSARLISTA.length > 0){
+        //     while(i<this.KOSARLISTA.length || this.KOSARLISTA[i].name != o.name) {
+        //         console.log(this.KOSARLISTA[i])
+        //         i++;
+        //         console.log(i>=this.KOSARLISTA.length)
+        //     }
+        // }
+        // else{
+        //     return false
+        // }
+
+        // return i>=this.KOSARLISTA.length;
     }
 
     kosarhozAd(o){

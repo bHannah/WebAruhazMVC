@@ -29,6 +29,7 @@ export default class Control{
             this.kosar = new Kosar(this.model.KOSARLISTA, this.kosarElem)
             let vegosszeg = this.model.vegosszegSzamito();
             this.kosar.vegosszegMegjelenit(vegosszeg);
+
         })
     }
 }
