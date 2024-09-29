@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(236, 226, 231);
+    background-color: #ece2e7;
 }
 
 main{
@@ -9,4 +9,12 @@ main{
 .kartya p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
+}
+
+.kartya button{
+    background-color: #ece2e7;
+    border: 1px #c0a1b1 solid;
+    border-radius: 10px;
+    width: 40%;
+    height: 40px;
 }
