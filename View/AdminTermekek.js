@@ -6,15 +6,19 @@ export default class AdminTermekek{
     #szuloElem
     //konstruktor
     constructor(lista, szuloElem){
-        this.#lista = lista;
-        this.#szuloElem = szuloElem
-        this.#szuloElem.empty()
-        this.kiir()
+        this.init(lista, szuloElem);
     }
+    
     //tagfüggvények
     kiir() {
         this.#lista.forEach((elem, id) => {
             new AdminKartya(elem, this.#szuloElem, id);
         })
+    }
+    init(lista, szuloElem) {
+        this.#lista = lista;
+        this.#szuloElem = szuloElem;
+        this.#szuloElem.empty();
+        this.kiir();
     }
 }

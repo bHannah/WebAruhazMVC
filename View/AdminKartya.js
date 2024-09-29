@@ -6,6 +6,8 @@ export default class AdminKartya{
         this.szuloElem = szuloElem;
         this.kartyaMegjelenit()
         this.id = id;
+        this.torolElem = $(".torles:last");
+        this.esemenykezelo();
     }
     //tagfüggvények
     kartyaMegjelenit(){
@@ -15,8 +17,16 @@ export default class AdminKartya{
                 <td>${this.#obj.name}</td>
                 <td>${this.#obj.color}</td>
                 <td>${this.#obj.price}</td>
-                <td><button>🗑️</button></td>
+                <td><button class="torles">🗑️</button></td>
             </tr>
             `)
+    }
+
+    esemenykezelo(){
+            this.torolElem.on("click", ()=>{
+                const e = new CustomEvent("torles", {detail:this.id});
+                window.dispatchEvent(e);
+                // console.log(this.torolElem);
+            })
     }
 }

@@ -4,8 +4,21 @@ import { DRESSLIST } from "../Model/adat.js";
 
 export default class AdminControl{
     constructor(){
-        this.termekElem=$(".admin-tbody");
-        this.model = new AdminModel(DRESSLIST);
-        new AdminTermekek(this.model.getLista(), this.termekElem);
+        this.init(DRESSLIST);
+
+        this.esemenykezelo();
+    }
+
+    init(lista) {
+        this.termekElem = $(".admin-tbody");
+        this.model = new AdminModel(lista);
+        this.termek = new AdminTermekek(this.model.getLista(), this.termekElem);
+    }
+
+    esemenykezelo(){
+        $(window).on("torles", (event)=>{
+            console.log(event.detail);
+            
+        });
     }
 }

@@ -5,10 +5,16 @@ export default class Model{
     #LISTA = [];
     //konstruktor
     constructor(lista){
-        this.#LISTA = lista
+        this.init(lista);
     }
     //tagfüggvények
-    getLista(){
-        return this.#LISTA
+    init(lista){
+        this.#LISTA = lista;
     }
+
+    getLista(){
+        return this.#LISTA;
+    }
+
+
 }
