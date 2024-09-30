@@ -27,15 +27,7 @@ export default class AdminControl{
         });
     }
 
-
-    //EZEN KELL VÁLTOZTATNI
     listahozAdas(){ 
-        // const form = document.getElementById('hozzaadas');
-        // const formElemek = form.elements;
-        // for (let i = 0; i < formElemek.length; i++) {
-        //     console.log(formElemek[i].name, formElemek[i].value);
-        // }
-
         var submit = $("#submit") ;
         submit.on("click", function () {
             console.log("hello")
@@ -44,10 +36,6 @@ export default class AdminControl{
             DRESSLIST.push({name: formElemek[0].value, pic: formElemek[3].value, color: formElemek[2].value, price: formElemek[1].value, menny: 1})
             let termekElem = $(".admin-tbody");
             new AdminTermekek(DRESSLIST, termekElem);
-            // console.log(this.model.getLista())
-            //init(model.getLista())
         });
     }
-
-
 }
