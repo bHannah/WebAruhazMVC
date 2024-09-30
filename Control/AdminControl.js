@@ -40,13 +40,8 @@ export default class AdminControl{
         submit.on("click", function () {
             console.log("hello")
             const form = document.getElementById('hozzaadas');
-            console.log(form)
             const formElemek = form.elements;
-            console.log(formElemek)
-            for (let i = 0; i < formElemek.length; i++) {
-                 console.log(formElemek[i].id, formElemek[i].value);
-            }
-            DRESSLIST.push({name: "", pic: "", color: "", price: "", menny: 1})
+            DRESSLIST.push({name: formElemek[0].value, pic: formElemek[3].value, color: formElemek[2].value, price: formElemek[1].value, menny: 1})
             let termekElem = $(".admin-tbody");
             new AdminTermekek(DRESSLIST, termekElem);
             // console.log(this.model.getLista())
