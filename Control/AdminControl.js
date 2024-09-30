@@ -1,11 +1,12 @@
-import AdminModel from "../Model/Model.js";
+import Model from "../Model/Model.js"
 import AdminTermekek from "../View/AdminTermekek.js";
 import { DRESSLIST } from "../Model/adat.js";
 
 
 export default class AdminControl{
-    
+
     constructor(){
+
         this.init(DRESSLIST);
 
         this.esemenykezelo();
@@ -13,8 +14,9 @@ export default class AdminControl{
 
     init(lista) {
         this.termekElem = $(".admin-tbody");
-        this.model = new AdminModel(lista);
+        this.model = new Model(lista);
         this.termek = new AdminTermekek(this.model.getLista(), this.termekElem);
+        this.listahozAdas()
     }
 
     esemenykezelo(){
@@ -26,10 +28,20 @@ export default class AdminControl{
     }
 
     listahozAdas(){
-        const form = document.getElementById('hozzaadas');
-        const formElemek = form.elements;
-        for (let i = 0; i < formElemek.length; i++) {
-            console.log(formElemek[i].name, formElemek[i].value);
-        }
+        // const form = document.getElementById('hozzaadas');
+        // const formElemek = form.elements;
+        // for (let i = 0; i < formElemek.length; i++) {
+        //     console.log(formElemek[i].name, formElemek[i].value);
+        // }
+
+        var submit = $("#submit") ;
+        submit.on("click", function () {
+            
+            // console.log("hello")
+            // console.log(this.model.getLista())
+            //init(model.getLista())
+        });
     }
+
+
 }

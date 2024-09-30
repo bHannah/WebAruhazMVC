@@ -65,6 +65,8 @@ export default class Model{
         let image = $('.kep').innerhtml()
         let db = 1
 
-        this.#LISTA.push(name, price, color, image, db)
+        console.log(name + price + color + image + db)
+
+        //this.#LISTA.push(name, price, color, image, db)
     }
 }
