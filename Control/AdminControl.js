@@ -27,7 +27,9 @@ export default class AdminControl{
         });
     }
 
-    listahozAdas(){
+
+    //EZEN KELL VÁLTOZTATNI
+    listahozAdas(){ 
         // const form = document.getElementById('hozzaadas');
         // const formElemek = form.elements;
         // for (let i = 0; i < formElemek.length; i++) {
@@ -36,8 +38,7 @@ export default class AdminControl{
 
         var submit = $("#submit") ;
         submit.on("click", function () {
-            
-            // console.log("hello")
+            console.log("hello")
             // console.log(this.model.getLista())
             //init(model.getLista())
         });
