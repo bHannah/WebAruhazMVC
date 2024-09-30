@@ -57,4 +57,14 @@ export default class Model{
         }
         this.KOSARLISTA.splice(o,1)
     }
+
+    adminHozzaadas(){
+        let name = $('.nev').innerhtml()
+        let price = $('.ar').innerhtml()
+        let color = $('.color').innerhtml()
+        let image = $('.kep').innerhtml()
+        let db = 1
+
+        this.#LISTA.push(name, price, color, image, db)
+    }
 }
